@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+
+# Visual Studio Code
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Node / build junk (safe even if unused)
+node_modules/
+
+# Logs
+*.log
