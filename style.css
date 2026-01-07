@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: "Nunito", sans-serif; /* readable body font */
-    background-color: #0b0b12;
+    background-color: #C4D7F2;
     color: #f2f2f7;
     line-height: 1.6;
 }
@@ -49,7 +49,7 @@ h3 {
 }
 
 .project {
-    background-color: #1a1a2e;
+    background-color: #F8C0C8;
     padding: 1rem;
     border-radius: 15px; /* bubbly corners */
     transition: transform 0.3s, box-shadow 0.3s;
@@ -57,7 +57,7 @@ h3 {
 
     .project:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2); /* subtle pink glow */
+        box-shadow: 0 10px 20px rgba(255, 71, 108, 1); /* bubble gum pink glow */
     }
 
 /* Paragraphs & Interests */
