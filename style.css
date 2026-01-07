@@ -1,6 +1,13 @@
 ﻿body {
     margin: 0;
-    font-family: system-ui, sans-serif;
+    .indie-flower-regular
+
+{
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
     background-color: #0b0b12;
     color: #f2f2f7;
     line-height: 1.6;
