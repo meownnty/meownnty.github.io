@@ -1,30 +1,28 @@
-﻿body {
+﻿/* Global Styles */
+body {
     margin: 0;
-    .indie-flower-regular
-
-{
-    font-family: "Indie Flower", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
+    font-family: "Nunito", sans-serif; /* readable body font */
     background-color: #0b0b12;
     color: #f2f2f7;
     line-height: 1.6;
 }
 
-/* Center content */
+/* Container for centered content */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 2rem;
 }
 
-/* Headings */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.2rem;
+/* Headers */
+h1, h2, h3 {
+    font-family: "Indie Flower", cursive; /* playful, bubbly font */
 }
+
+    h1.header {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
 
 h2 {
     margin-top: 2.5rem;
@@ -32,19 +30,48 @@ h2 {
     padding-bottom: 0.3rem;
 }
 
-/* Projects section */
-.project {
-    margin-top: 1.5rem;
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    border-radius: 8px;
+/* Intro paragraph */
+.intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Projects section */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project {
+    background-color: #1a1a2e;
+    padding: 1rem;
+    border-radius: 15px; /* bubbly corners */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2); /* subtle pink glow */
+    }
+
+/* Paragraphs & Interests */
+p {
+    margin-bottom: 0.8rem;
 }
 
 /* Links */
 a {
     color: #8ab4ff;
     text-decoration: none;
+    transition: color 0.3s;
 }
+
+    a:hover {
+        color: #ff9ce5; /* playful hover */
+    }
