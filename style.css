@@ -1,26 +1,36 @@
-﻿html, body {
+﻿/* Global styles */
+html, body {
     margin: 0;
     padding: 0;
     font-family: "Nunito", sans-serif;
     overflow-x: hidden; /* prevent horizontal scroll */
-    background-color: #0b1c2d;
 }
 
-/* Set the body height to image height so you can scroll fully */
+/* Make body height = image height so we can scroll */
 body {
-    height: 6000px; /* image height */
+    height: 6000px; /* your image height */
+    background-color: #0b1c2d; /* fallback */
 }
 
 /* Background div */
 .background-water {
-    position: absolute; /* absolute so it moves with JS */
+    position: fixed; /* stays behind content */
     top: 0;
     left: 0;
     width: 100%;
-    height: 6000px; /* image height */
+    height: 100%;
     background-image: url("images/background.jpeg");
-    background-size: cover; /* fill the width, crop if needed */
+    background-size: cover; /* fill the screen width */
     background-repeat: no-repeat;
     background-position: top center;
     z-index: -1;
+}
+
+/* Content */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
 }
