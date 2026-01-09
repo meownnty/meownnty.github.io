@@ -1,25 +1,21 @@
 ﻿html, body {
+    height: 6000px; /* same as image */
     margin: 0;
-    padding: 0;
-    font-family: "Nunito", sans-serif;
-    background-color: #0b1c2d; /* deep water fallback */
-    overflow-x: hidden; /* prevents horizontal scroll */
+    background-color: #0b1c2d;
+    overflow-x: hidden;
 }
 
-/* Make body very tall to allow scrolling */
 .spacer {
-    height: 6000px; /* match image height */
+    height: calc(6000px - 100vh);
 }
-
-/* Background div */
 .background-water {
-    position: fixed; /* FIXED keeps it visible behind content */
+    position: absolute; /* NOT fixed anymore */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 6000px;
     background-image: url("images/background.jpeg");
-    background-size: contain; /* ensures full image fits */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: top center;
     z-index: -1;
