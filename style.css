@@ -2,8 +2,10 @@
 body {
     margin: 0;
     font-family: "Nunito", sans-serif; /* readable body font */
-    background-color: #C4D7F2;
-    color: #f2f2f7;
+    background-image: url("images/backgrounds/water.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     line-height: 1.6;
 }
 
