@@ -9,12 +9,7 @@ body {
     line-height: 1.6;
 }
 
-/* Container for centered content */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem;
-}
+
 
 /* Headers */
 h1, h2, h3 {
