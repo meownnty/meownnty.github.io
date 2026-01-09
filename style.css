@@ -15,7 +15,7 @@ body {
     position: absolute; /* scrolls naturally */
     top: 0;
     left: 0;
-    width: 1000px;
+    width: 50%;
     height: 6000px; /* match image height */
     object-fit: cover; /* fills width while keeping aspect ratio */
     z-index: -1; /* content floats above */
