@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: "Nunito", sans-serif; /* readable body font */
-    background-image: url("images/backgrounds/water.png");
+    background-image: url("images/background.jpeg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
