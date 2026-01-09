@@ -1,6 +1,9 @@
+
+const background = document.querySelector(".background-water");
+
 window.addEventListener("scroll", () => {
-    document.documentElement.style.setProperty(
-        "--scroll",
-        window.scrollY + "px"
-    );
+    const scrollY = window.scrollY;
+
+    // move background slower than scroll
+    background.style.transform = `translateY(${scrollY * 0.3}px)`;
 });

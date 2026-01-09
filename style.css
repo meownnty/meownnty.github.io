@@ -1,11 +1,22 @@
 ﻿﻿ /* Global Styles */
 body {
     margin: 0;
-    padding: 0;
-    background-color: #0b1c2d; /* deep underwater blue */
+    font-family: "Nunito", sans-serif;
+    background-color: #0b1c2d; /* deep water fallback */
     overflow-x: hidden;
 }
-
+.background-water {
+    position: absolute; /* allows JS parallax */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6000px; /* match the image height */
+    background-image: url("images/background.jpeg");
+    background-size: contain; /* show full image */
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: -1;
+}
 /* World container */
 .world {
     position: fixed;
