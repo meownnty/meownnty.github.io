@@ -1,39 +1,24 @@
 ﻿﻿ /* Global Styles */
-body {
+html, body {
     margin: 0;
+    padding: 0;
     font-family: "Nunito", sans-serif;
     background-color: #0b1c2d; /* deep water fallback */
-    overflow-x: hidden;
+    overflow-x: hidden; /* prevents horizontal scroll */
 }
+
+/* Background div */
 .background-water {
     position: absolute; /* allows JS parallax */
     top: 0;
     left: 0;
     width: 100%;
-    height: 6000px; /* match the image height */
+    height: 6000px; /* match image height */
     background-image: url("images/background.jpeg");
-    background-size: contain; /* show full image */
+    background-size: contain; /* ensures full image visible */
     background-repeat: no-repeat;
     background-position: top center;
     z-index: -1;
-}
-/* World container */
-.world {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    overflow: hidden;
-}
-
-/* Background image */
-.bg-world {
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    display: block;
 }
 
 /* Content floats above */
@@ -43,7 +28,4 @@ body {
     max-width: 900px;
     margin: auto;
     padding: 2rem;
-}
-.bg-world {
-    transform: translateY(calc(var(--scroll) * 0.2));
 }
