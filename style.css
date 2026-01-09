@@ -1,78 +1,38 @@
 ﻿﻿ /* Global Styles */
 body {
     margin: 0;
-    font-family: "Nunito", sans-serif; /* readable body font */
-    background-image: url("images/background.jpeg");
-    background-size: cover;
-    background attachement: scroll;
-    background-position: center;
-    line-height: 1.6;
+    padding: 0;
+    background-color: #0b1c2d; /* deep underwater blue */
+    overflow-x: hidden;
 }
 
-.bg-scroll {
+/* World container */
+.world {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+/* Background image */
+.bg-world {
     width: 100%;
     height: auto;
+    min-height: 100%;
     display: block;
 }
 
-/* Headers */
-h1, h2, h3 {
-    font-family: "Indie Flower", cursive; /* playful, bubbly font */
+/* Content floats above */
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
 }
-
-    h1.header {
-        font-size: 3rem;
-        margin-bottom: 0.5rem;
-    }
-
-h2 {
-    margin-top: 2.5rem;
-    border-bottom: 1px solid #2a2a40;
-    padding-bottom: 0.3rem;
+.bg-world {
+    transform: translateY(calc(var(--scroll) * 0.2));
 }
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.3rem;
-}
-
-/* Intro paragraph */
-.intro {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-/* Projects section */
-.projects {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.project {
-    background-color: #F8C0C8;
-    padding: 1rem;
-    border-radius: 15px; /* bubbly corners */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-    .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(255, 71, 108, 1); /* bubble gum pink glow */
-    }
-
-/* Paragraphs & Interests */
-p {
-    margin-bottom: 0.8rem;
-}
-
-/* Links */
-a {
-    color: #8ab4ff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-    a:hover {
-        color: #ff9ce5; /* playful hover */
-    }
