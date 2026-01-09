@@ -1,5 +1,4 @@
-﻿﻿ /* Global Styles */
-html, body {
+﻿html, body {
     margin: 0;
     padding: 0;
     font-family: "Nunito", sans-serif;
@@ -7,22 +6,27 @@ html, body {
     overflow-x: hidden; /* prevents horizontal scroll */
 }
 
+/* Make body very tall to allow scrolling */
+.spacer {
+    height: 6000px; /* match image height */
+}
+
 /* Background div */
 .background-water {
-    position: absolute; /* allows JS parallax */
+    position: fixed; /* FIXED keeps it visible behind content */
     top: 0;
     left: 0;
     width: 100%;
-    height: 6000px; /* match image height */
+    height: 100%;
     background-image: url("images/background.jpeg");
-    background-size: contain; /* ensures full image visible */
+    background-size: contain; /* ensures full image fits */
     background-repeat: no-repeat;
     background-position: top center;
     z-index: -1;
 }
 
 /* Content floats above */
-.content {
+.container {
     position: relative;
     z-index: 1;
     max-width: 900px;
