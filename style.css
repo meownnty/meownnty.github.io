@@ -9,18 +9,11 @@ body {
     line-height: 1.6;
 }
 
-.background-water {
-    position: absolute; /* moves naturally with content */
-    top: 0;
-    left: 0;
+.bg-scroll {
     width: 100%;
-    height: 200vh; /* make it taller than the viewport so we can scroll through it */
-    background-image: url("images/background.jpeg");
-    background-size: cover;
-    background-position: top center; /* start at the top */
-    z-index: -1; /* behind content */
+    height: auto;
+    display: block;
 }
-
 
 /* Headers */
 h1, h2, h3 {

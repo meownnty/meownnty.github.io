@@ -7,7 +7,3 @@ img.onload = () => {
     background.style.height = `${imageHeight}px`;
 };
 
-window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    background.style.backgroundPosition = `center ${scrollY * 0.5}px`;
-});
