@@ -1,0 +1,60 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden; /* no horizontal scroll */
+}
+
+body {
+    /* Let content define the scroll height naturally */
+    min-height: 200vh; /* or more if you have lots of content */
+}
+
+/* Popup overlay */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 15, 30, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup {
+    background: #0e1b2a;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+}
+
+    .popup button {
+        margin: 1rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+/* Views */
+.view {
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Scrollable background */
+#interactive-view .background-water {
+    position: absolute; /* scrolls with content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* will scale with width */
+    min-height: 100vh; /* ensure it fills viewport initially */
+    z-index: -1; /* content floats above */
+    object-fit: cover; /* fill width while keeping aspect ratio */
+}

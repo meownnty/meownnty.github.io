@@ -6,19 +6,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet"> <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Background image -->
-    <img src="images/background.jpeg" alt="Underwater Library" class="background-water">
+    <div id="mode-popup" class="popup-overlay">
+        <div class="popup">
+            <h2>How would you like to explore?</h2>
+            <p>Choose a quick overview or an immersive experience.</p>
 
-    <!-- Content -->
-    <div class="container">
-        <h1 class="header">Abigail Hope Sykes</h1>
-        <p class="intro">Game Developer & Artist ✨ Inspired by games, K-pop, and dreamy worlds</p>
-        <!-- more portfolio content here -->
+            <button id="quickViewBtn">Quick View</button>
+            <button id="interactiveBtn">Explore</button>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <section id="quick view" class="view hidden">
+    </section>
+
+    <section id="interactive view" class="view hidden">
+        <!-- Background image -->
+        <img src="images/background.jpeg" alt="Underwater Library" class="background-water">
+
+        <!-- Content -->
+        <div class="container">
+            <h1 class="header">Abigail Hope Sykes</h1>
+            <p class="intro">Game Developer & Artist ✨ Inspired by games, K-pop, and dreamy worlds</p>
+            <!-- more portfolio content here -->
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
