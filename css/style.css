@@ -67,10 +67,10 @@ body {
     padding: 3rem 2rem;
     box-sizing: border-box;
 }
-..cards-container {
+.cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, 280px);
+    gap: 1.5rem;
     justify-content: center;
 }
 
@@ -95,7 +95,7 @@ body {
     background-color: #112b3c;
     border-radius: 12px;
     overflow: hidden;
-    padding: 1rem;
+    padding: 1.2rem;
 }
 
 .image-collage {
