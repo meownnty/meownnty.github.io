@@ -118,35 +118,39 @@ featured-layout {
     padding: 0.75 rem;
 }
 
-.image-collage {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 6px;
-    height: 200px;
+.image-layered {
+    position: relative; /* allows absolute positioning inside */
+    width: 100%;
+    height: 220px; /* total height of the image area */
 }
 
-.img-main {
-    grid-row: span 2;
-    width: 100%;
+.img-big {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%; /* big image takes left side */
     height: 100%;
     object-fit: cover;
-    border-radius: 8px 0 0 8px;
+    border-radius: 8px;
 }
 
 .img-small {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 32%; /* small images stacked on the right */
+    height: 48%; /* each small image half height */
     object-fit: cover;
+    border-radius: 8px;
 }
 
-    .img-small.top {
-        border-radius: 0 8px 0 0;
-    }
+.img-top {
+    top: 0;
+}
 
-    .img-small.bottom {
-        border-radius: 0 0 8px 0;
-    }
+.img-bottom {
+    bottom: 0;
+}
+
 @media (max-width: 768px) {
     .image-collage {
         height: 160px;
