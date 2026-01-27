@@ -96,7 +96,6 @@ body {
 /* Card container */
 .project-card {
     max-width: 200px;
-    position: relative;
     background-color: #112b3c;
     border-radius: 12px;
     overflow: hidden;
@@ -105,9 +104,9 @@ body {
 
 .image-collage {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* big image left, small images right */
+    grid-template-columns: 2fr 1fr;
     gap: 6px;
-    height: 44px; /* total height of the collage */
+    height: 200px; /* adjust to make big image prominent */
 }
 
 .img-big {
