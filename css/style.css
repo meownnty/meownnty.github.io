@@ -69,9 +69,9 @@ body {
 }
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 .card {
@@ -95,6 +95,7 @@ body {
     }
 /* Card container */
 .project-card {
+    max-width: 200px;
     position: relative;
     background-color: #112b3c;
     border-radius: 12px;
@@ -106,7 +107,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr; /* big image left, small images right */
     gap: 6px;
-    height: 220px; /* total height of the collage */
+    height: 44px; /* total height of the collage */
 }
 
 .img-big {
