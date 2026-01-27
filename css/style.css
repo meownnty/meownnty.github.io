@@ -102,3 +102,8 @@ body {
         font-size: 0.9rem;
         color: #cbd5e0;
     }
+#quick-view {
+    background: red !important;
+    min-height: 100vh !important;
+    display: block !important;
+}
