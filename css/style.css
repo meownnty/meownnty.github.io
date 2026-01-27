@@ -95,7 +95,7 @@ body {
     }
 /* Card container */
 .project-card {
-    max-width: 220px; /* card width */
+    max-width: 220px;
     background-color: #112b3c;
     border-radius: 12px;
     overflow: hidden;
@@ -103,44 +103,51 @@ body {
 }
 
 .image-collage {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* big image left, small images right */
+    display: flex; /* use flex instead of grid for precise control */
     gap: 6px;
-    height: 200px; /* same as big image */
+    margin-bottom: 0.5rem;
 }
 
+/* Big image left */
 .img-big {
-    width: 100%;
-    height: 100%; /* fills left column */
-    object-fit: cover;
+    flex: 2; /* takes 2/3 of width */
+    height: 200px; /* fixed height */
     border-radius: 8px;
+    object-fit: cover;
 }
 
+/* Small images container */
 .small-images {
-    display: grid;
-    grid-template-rows: 90px 90px; /* two small images stacked */
+    flex: 1; /* takes 1/3 of width */
+    display: flex;
+    flex-direction: column; /* stack vertically */
     gap: 6px;
 }
 
+/* Each small image */
 .img-small {
+    height: 96px; /* fixed height for each small image */
     width: 100%;
-    height: 100%; /* fills its grid row exactly */
     object-fit: cover;
     border-radius: 8px;
 }
 
-/* Card text */
+/* Text below images */
 .project-card h3 {
     font-size: 0.85rem;
-    line-height: 1.2;
-    margin: 0.25rem 0;
+    margin: 0.3rem 0 0.2rem;
 }
 
 .project-card p {
     font-size: 0.7rem;
-    line-height: 1.2;
-    margin: 0 0 0.5rem;
     color: #cbd5e0;
+    margin: 0;
+}
+
+/* Hover effect */
+.project-card:hover .image-collage img {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.35);
 }
 
 @media (max-width: 768px) {
