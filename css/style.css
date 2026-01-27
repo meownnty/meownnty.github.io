@@ -105,3 +105,37 @@ body {
         font-size: 0.9rem;
         color: #cbd5e0;
     }
+featured-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+}
+
+/* Big card spans two rows */
+.card-big {
+    grid-row: span 2;
+}
+
+    /* Image sizes */
+    .card-big img {
+        height: 320px;
+    }
+
+.card-small img {
+    height: 150px;
+}
+@media (max-width: 768px) {
+    .featured-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .card-big {
+        grid-row: auto;
+    }
+
+        .card-big img,
+        .card-small img {
+            height: 200px;
+        }
+}
