@@ -95,7 +95,7 @@ body {
     }
 /* Card container */
 .project-card {
-    max-width: 200px;
+    max-width: 220px; /* card width */
     background-color: #112b3c;
     border-radius: 12px;
     overflow: hidden;
@@ -104,53 +104,42 @@ body {
 
 .image-collage {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 6px;
- 
-}
-
-image-collage {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* big vs small column */
-    gap: 6px;
-}
-
-.small-images {
-    display: grid;
-    grid-template-rows: 0.5fr 0.5fr; /* each small image half the height of big image */
+    grid-template-columns: 2fr 1fr; /* big image left, small images right */
     gap: 6px;
 }
 
 .img-big {
     width: 100%;
-    height: 100%;
+    height: 200px; /* precise height for big image */
     object-fit: cover;
+    border-radius: 8px;
+}
+
+.small-images {
+    display: grid;
+    grid-template-rows: 90px 90px; /* each small image precise height */
+    gap: 6px;
 }
 
 .img-small {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-.project-card:hover .image-collage img {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+    border-radius: 8px;
 }
 
 /* Card text */
 .project-card h3 {
-    font-size: 0.95rem; /* smaller heading */
+    font-size: 0.85rem;
     line-height: 1.2;
-    margin: 0.3rem 0 0.2rem;
-    border: 1px solid red;
+    margin: 0.25rem 0;
 }
 
 .project-card p {
-    font-size: 0.75rem; /* smaller paragraph text */
+    font-size: 0.7rem;
     line-height: 1.2;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem;
     color: #cbd5e0;
-    border: 1px solid red;
 }
 
 @media (max-width: 768px) {
