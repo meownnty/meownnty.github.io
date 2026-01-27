@@ -95,7 +95,7 @@ body {
     }
 /* Card container */
 .project-card {
-    max-width: 220px;
+    width: 300px; /* fixed card width */
     background-color: #112b3c;
     border-radius: 12px;
     overflow: hidden;
@@ -103,31 +103,30 @@ body {
 }
 
 .image-collage {
-    display: flex; /* use flex instead of grid for precise control */
+    display: flex; /* left = big image, right = small images */
     gap: 6px;
     margin-bottom: 0.5rem;
 }
 
-/* Big image left */
+/* Big image */
 .img-big {
-    flex: 2; /* takes 2/3 of width */
+    width: 200px; /* fixed width */
     height: 200px; /* fixed height */
-    border-radius: 8px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Small images container */
 .small-images {
-    flex: 1; /* takes 1/3 of width */
     display: flex;
-    flex-direction: column; /* stack vertically */
+    flex-direction: column;
     gap: 6px;
 }
 
-/* Each small image */
+/* Small images */
 .img-small {
-    height: 96px; /* fixed height for each small image */
-    width: 100%;
+    width: 100px; /* fixed width smaller than big image */
+    height: 96px; /* smaller than big image */
     object-fit: cover;
     border-radius: 8px;
 }
