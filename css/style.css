@@ -117,8 +117,9 @@ body {
 
 .small-images {
     display: grid;
-    grid-template-rows: 90px 90px; /* each small image precise height */
-    gap: 6px;
+    grid-template-rows: 90px 90px; /* each small image height */
+    gap: 6px; /* space between the two small images */
+    height: 186px; /* total height to fit both images + gap */
 }
 
 .img-small {
