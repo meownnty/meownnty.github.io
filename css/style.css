@@ -59,7 +59,7 @@ body {
     object-fit: cover; /* fill width while keeping aspect ratio */
 }
 
-#quick-view .background-quick-view {
+#quick-view {
     background-color: #364156;
     min-height: 100vh;
     padding: 3rem 2rem;
@@ -102,8 +102,3 @@ body {
         font-size: 0.9rem;
         color: #cbd5e0;
     }
-#quick-view {
-    background: red !important;
-    min-height: 100vh !important;
-    display: block !important;
-}
