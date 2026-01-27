@@ -93,46 +93,46 @@ body {
         height: 150px;
         object-fit: cover;
     }
-
+/* Card container */
 .project-card {
-    position: relative; /* needed for layering */
+    position: relative;
     background-color: #112b3c;
     border-radius: 12px;
     overflow: hidden;
     padding: 1rem;
 }
 
-/* Container for layered images */
-.image-layered {
-    position: relative; /* absolutely positioned images reference this */
+/* Image collage container */
+.image-collage {
+    position: relative; /* important for absolute positioning inside */
     width: 100%;
-    height: 220px; /* total height of image area */
+    height: 220px; /* total height of the collage */
 }
 
-/* Big image */
+/* Big image on the left */
 .img-big {
     position: absolute;
     top: 0;
     left: 0;
-    width: 65%; /* big image on left */
+    width: 75%; /* adjust to make big image bigger */
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    z-index: 1; /* base layer */
+    z-index: 1; /* behind small images */
 }
 
-/* Small images */
+/* Small images on the right */
 .img-small {
     position: absolute;
     right: 0;
-    width: 32%; /* small images on right */
-    height: 48%; /* each small image half height */
+    width: 23%; /* adjust to fit beside big image */
+    height: 48%; /* half height each */
     object-fit: cover;
     border-radius: 8px;
-    z-index: 2; /* top layer */
+    z-index: 2; /* on top of big image */
 }
 
-/* Position small images */
+/* Position top/bottom small images */
 .img-top {
     top: 0;
 }
@@ -142,15 +142,22 @@ body {
 }
 
 /* Optional hover effect */
-.image-layered img {
+.image-collage img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover .image-layered img {
+.project-card:hover .image-collage img {
     transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(0,0,0,0.35);
 }
 
+/* Card text */
+.project-card h3 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #fff;
+}
 
 @media (max-width: 768px) {
     .image-collage {
