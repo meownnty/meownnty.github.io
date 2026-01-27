@@ -60,9 +60,12 @@ body {
 }
 
 #quick-view {
+    min-height: 100vh; /* at least one full screen */
+    width: 100%;
     background-color: #364156;
-    min-height: 100vh;
     padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
 }
 .cards-container {
     display: grid;
