@@ -48,7 +48,7 @@ body {
 }
 
 /* Scrollable background */
-#interactive-view .background-water-interatcive {
+#interactive-view .background-water-interactive {
     position: absolute; /* scrolls with content */
     top: 0;
     left: 0;
@@ -60,14 +60,9 @@ body {
 }
 
 #quick-view .background-quick-view {
-    background-color: 364156;
-    position: fixed; /* stays put while scrolling */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* content floats above */
-    object-fit: cover; /* fill while keeping aspect ratio */
+    background-color: #364156;
+    min-height: 100vh;
+    padding: 3rem 2rem;
 }
 .cards-container {
     display: grid;
