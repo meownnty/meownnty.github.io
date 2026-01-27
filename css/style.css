@@ -48,7 +48,7 @@ body {
 }
 
 /* Scrollable background */
-#interactive-view .background-water {
+#interactive-view .background-water-interatcive {
     position: absolute; /* scrolls with content */
     top: 0;
     left: 0;
@@ -59,7 +59,7 @@ body {
     object-fit: cover; /* fill width while keeping aspect ratio */
 }
 
-#quick-view .background {
+#quick-view .background-quick-view {
     background-color: 364156;
     position: fixed; /* stays put while scrolling */
     top: 0;
