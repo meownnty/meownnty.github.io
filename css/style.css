@@ -94,55 +94,45 @@ body {
         object-fit: cover;
     }
 
-.project-card h3 {
-    margin-top: 0.4rem;
-    font-size: 1rem;
-    line-height: 1.2;
-}
-
-.project-card p {
-    margin-top: 0.2rem;
-    font-size: 0.85rem;
-    line-height: 1.3;
-    color: #cbd5e0;
-}
-featured-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1.5rem;
-}
-
 .project-card {
+    position: relative; /* needed for layering */
+    background-color: #112b3c;
+    border-radius: 12px;
     overflow: hidden;
-    padding: 0.75 rem;
+    padding: 1rem;
 }
 
+/* Container for layered images */
 .image-layered {
-    position: relative; /* allows absolute positioning inside */
+    position: relative; /* absolutely positioned images reference this */
     width: 100%;
-    height: 220px; /* total height of the image area */
+    height: 220px; /* total height of image area */
 }
 
+/* Big image */
 .img-big {
     position: absolute;
     top: 0;
     left: 0;
-    width: 65%; /* big image takes left side */
+    width: 65%; /* big image on left */
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    z-index: 1; /* base layer */
 }
 
+/* Small images */
 .img-small {
     position: absolute;
     right: 0;
-    width: 32%; /* small images stacked on the right */
+    width: 32%; /* small images on right */
     height: 48%; /* each small image half height */
     object-fit: cover;
     border-radius: 8px;
+    z-index: 2; /* top layer */
 }
 
+/* Position small images */
 .img-top {
     top: 0;
 }
@@ -150,6 +140,17 @@ featured-layout {
 .img-bottom {
     bottom: 0;
 }
+
+/* Optional hover effect */
+.image-layered img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover .image-layered img {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+}
+
 
 @media (max-width: 768px) {
     .image-collage {
