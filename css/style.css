@@ -88,11 +88,7 @@ body {
         box-shadow: 0 10px 20px rgba(181, 255, 233, 1.0);
     }
 
-    .card img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-    }
+ 
 /* Card container */
 .project-card {
     width: 300px; /* fixed card width */
