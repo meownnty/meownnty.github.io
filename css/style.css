@@ -91,7 +91,7 @@ body {
  
 /* Card container */
 .project-card {
-    width: 220px; /* fixed card width */
+    width: 300px; /* fixed card width */
     background-color: #112b3c;
     border-radius: 12px;
     overflow: hidden;
