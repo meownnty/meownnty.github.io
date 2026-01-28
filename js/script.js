@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             quickView.classList.remove("hidden");
             interactiveView.classList.add("hidden");
             sideMenu.classList.add("hidden");
+            localStorage.setItem("viewMode", "quick"); // SAVE
             window.scrollTo(0, 0);
         });
     }
@@ -68,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             interactiveView.classList.remove("hidden");
             quickView.classList.add("hidden");
             sideMenu.classList.add("hidden");
+            localStorage.setItem("viewMode", "interactive"); // SAVE
             window.scrollTo(0, 0);
         });
     }

@@ -85,19 +85,19 @@ body {
 }
 
 #interactive-view {
-    position: relative; /* parent context for absolute background */
-    overflow: visible; /* make sure background isn't clipped */
+    position: relative; /* parent context */
+    min-height: 100vh; /* ensure it fills the viewport */
 }
 
 .background-water-interactive {
-    position: fixed; /* stays behind content and scrolls parallax-style */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%; /* full height of parent */
     object-fit: cover;
-    z-index: -1; /* behind everything */
-}
+    z-index: -1;
+}}
 #quick-view {
     min-height: 100vh;
     width: 100%;
