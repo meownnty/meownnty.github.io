@@ -84,18 +84,20 @@ body {
     display: none;
 }
 
-/* Scrollable background */
-#interactive-view .background-water-interactive {
-    position: absolute; /* scrolls with content */
+#interactive-view {
+    position: relative; /* parent context for absolute background */
+    overflow: visible; /* make sure background isn't clipped */
+}
+
+.background-water-interactive {
+    position: fixed; /* stays behind content and scrolls parallax-style */
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* will scale with width */
-    min-height: 100vh; /* ensure it fills viewport initially */
-    z-index: -1; /* content floats above */
-    object-fit: cover; /* fill width while keeping aspect ratio */
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* behind everything */
 }
-
 #quick-view {
     min-height: 100vh;
     width: 100%;
