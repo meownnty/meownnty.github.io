@@ -10,6 +10,42 @@ body {
     /* Let content define the scroll height naturally */
     min-height: 200vh; /* or more if you have lots of content */
 }
+.menu-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    background: #112b3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 220px;
+    height: 100vh;
+    background: #0e1b2a;
+    padding: 4rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+    .side-menu button {
+        background: #112b3c;
+        color: white;
+        border: none;
+        padding: 0.6rem;
+        border-radius: 8px;
+        cursor: pointer;
+    }
 
 /* Popup overlay */
 .popup-overlay {
