@@ -1,198 +1,204 @@
-﻿html, body {
-    background-color: #364156;
+﻿/* ============================================
+   MEOWNNTY STUDIO — CLEAN PORTFOLIO
+   #FF0073  → Neon Pink (Main)
+   #00FF40  → Neon Green (Main)
+   #FFBED8  → Soft Pink
+   #BAEDBE  → Soft Mint
+   #FFFFFF  → White
+   ============================================ */
+
+/* --- RESET & BASE --- */
+html, body {
+    background-color: #FFFFFF;
     margin: 0;
     padding: 0;
-    font-family: "Nunito", sans-serif;
-    overflow-x: hidden; /* no horizontal scroll */
+    font-family: "Nunito", "Indie Flower", sans-serif;
+    overflow-x: hidden;
+    color: #1a1a1a;
 }
 
 body {
-    /* Let content define the scroll height naturally */
-    min-height: 200vh; /* or more if you have lots of content */
-}
-.menu-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1001;
-    background: #112b3c;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem 0.8rem;
-    font-size: 1.2rem;
-    cursor: pointer;
+    min-height: 100vh;
 }
 
-.side-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 220px;
-    height: 100vh;
-    background: #0e1b2a;
-    padding: 4rem 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 1000;
+/* --- HEADINGS & TEXT --- */
+h1, h2, h3 {
+    font-family: "Indie Flower", cursive;
+    letter-spacing: 0.5px;
 }
 
-    .side-menu button {
-        background: #112b3c;
-        color: white;
-        border: none;
-        padding: 0.6rem;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-/* Popup overlay */
-.popup-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(5, 15, 30, 0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+h1 {
+    color: #FF0073;
+    font-size: 3.5rem;
+    text-shadow: 3px 3px 0px #00FF40;
+    margin-bottom: 0.2rem;
 }
 
-.popup {
-    background: #0e1b2a;
-    padding: 2rem;
-    border-radius: 12px;
+h2 {
+    color: #FF0073;
+    font-size: 2.8rem;
+    border-bottom: 6px solid #00FF40;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+/* --- HEADER / HERO SECTION --- */
+.hero {
+    background: #FFBED8;
+    padding: 4rem 2rem 3rem;
     text-align: center;
-    max-width: 400px;
+    border-bottom: 8px solid #00FF40;
 }
 
-    .popup button {
-        margin: 1rem;
-        padding: 0.8rem 1.5rem;
-        border-radius: 8px;
-        border: none;
-        cursor: pointer;
-        font-weight: 600;
-    }
-
-/* Views */
-.view {
-    min-height: 100vh;
+.hero p {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
 }
 
-.hidden {
-    display: none;
+.hero .highlight {
+    color: #FF0073;
+    font-weight: 600;
 }
 
-#interactive-view {
-    position: relative; /* important */
-    min-height: 100vh;
+.hero .subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
 }
 
-.background-water-interactive {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* behind content */
-}
-#quick-view {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #364156;
+/* --- PORTFOLIO GRID --- */
+.portfolio {
+    background: #FFFFFF;
     padding: 3rem 2rem;
-    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2.5rem;
-    padding: 2rem;
+    padding: 1rem 0;
 }
 
-.card {
-    background-color: #112b3c;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-    transition: transform 0.2s, box-shadow 0.2s;
+/* --- PROJECT CARDS (MEOWNNTY STYLE) --- */
+.project-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 1.2rem;
+    box-shadow: 0 8px 0 #00FF40;
+    border: 3px solid #FF0073;
+    transition: 0.15s ease;
     cursor: pointer;
 }
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(181, 255, 233, 1.0);
-    }
-
- 
-/* Card container */
-.project-card {
-    background-color: #112b3c;
-    border-radius: 12px;
-    padding: 1rem;
+.project-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 0 #FF0073, 0 12px 24px rgba(255, 0, 115, 0.25);
+    border-color: #00FF40;
 }
 
 .image-collage {
-    display: flex; /* left = big image, right = small images */
+    display: flex;
     gap: 6px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
-/* Big image */
 .img-big {
-    width: 200px; /* fixed width */
-    height: 200px; /* fixed height */
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
+    border: 2px solid #FFBED8;
 }
 
-/* Small images container */
 .small-images {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-/* Small images */
 .img-small {
-    width: 100px; /* fixed width smaller than big image */
-    height: 96px; /* smaller than big image */
+    width: 100px;
+    height: 96px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
+    border: 2px solid #BAEDBE;
 }
 
-/* Text below images */
 .project-card h3 {
-    font-size: 0.85rem;
+    color: #FF0073;
+    font-size: 1.1rem;
     margin: 0.3rem 0 0.2rem;
+    font-family: "Indie Flower", cursive;
 }
 
 .project-card p {
-    font-size: 0.7rem;
-    color: #cbd5e0;
+    font-size: 0.85rem;
+    color: #1a1a1a;
     margin: 0;
 }
 
-/* Hover effect */
-.project-card:hover .image-collage img {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+/* --- FOOTER --- */
+footer {
+    background: #FFBED8;
+    text-align: center;
+    padding: 2rem;
+    border-top: 8px solid #00FF40;
+    margin-top: 2rem;
 }
 
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+}
+
+footer .heart {
+    color: #FF0073;
+    font-weight: 600;
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    .image-collage {
-        height: 160px;
+    h1 {
+        font-size: 2.5rem;
     }
 
-    .img-main {
-        grid-row: auto;
-        height: 200px;
-        border-radius: 8px 8px 0 0;
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .image-collage {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-big {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+    }
+
+    .small-images {
+        flex-direction: row;
+        width: 100%;
+        gap: 6px;
     }
 
     .img-small {
-        height: 120px;
+        width: 48%;
+        height: 100px;
     }
 }

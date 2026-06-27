@@ -9,102 +9,98 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <button id="menu-toggle" class="menu-toggle">☰</button>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>🐱 Meownnty Studio</h1>
+        <p>
+            Game Developer & Artist ✨ Inspired by games, K-pop, and dreamy worlds
+        </p>
+        <p class="subtitle">
+            I make <span class="highlight">games</span>, 
+            <span class="highlight">3D art</span>, 
+            <span class="highlight">VTuber models</span>, 
+            and <span class="highlight">chaos</span>.<br>
+            🐱 Neon pink cats · 🐸 Glowing frogs · 💖 Big dreams
+        </p>
+        <p class="subtitle" style="margin-top:0.8rem; font-size:0.9rem; color:#555;">
+            📍 Durban, South Africa · Working globally
+        </p>
+    </section>
 
-    <nav id="side-menu" class="side-menu hidden">
-        <button id="menu-quick">Quick View</button>
-        <button id="menu-interactive">Interactive View</button>
-    </nav>
-
-    <div id="mode-popup" class="popup-overlay">
-        <div class="popup">
-            <h2>How would you like to explore?</h2>
-            <p>Choose a quick overview or an immersive experience.</p>
-
-            <button id="quickViewBtn">Quick View</button>
-            <button id="interactiveBtn">Explore</button>
-        </div>
-    </div>
-
-    <section id="quick-view" class="view background-quick-view">
-        <h2>My Projects</h2>
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio">
+        <h2>🐱 My Projects</h2>
         <div class="cards-container">
 
             <div class="card project-card">
                 <div class="image-collage">
-                    <img src="Assets/images/Mush-Go-Deeper.png" alt="Big image" class="img-big">
+                    <img src="Assets/images/Mush-Go-Deeper.png" alt="Mush Go Deeper" class="img-big">
                     <div class="small-images">
-                        <img src="Assets/images/Mush-Go-Deeper.png" alt="Small image top" class="img-small">
-                        <img src="Assets/images/Mush-Go-Deeper.png" alt="Small image bottom" class="img-small">
+                        <img src="Assets/images/Mush-Go-Deeper.png" alt="Screenshot 1" class="img-small">
+                        <img src="Assets/images/Mush-Go-Deeper.png" alt="Screenshot 2" class="img-small">
                     </div>
                 </div>
-                <h3>Mush Go Deeper</h3>
+                <h3>🍄 Mush Go Deeper</h3>
                 <p>A 2D platformer made for Ludum Dare 2025.</p>
             </div>
 
             <div class="card project-card">
                 <div class="image-collage">
-                    <img src="Assets/images/Frog.png" class="img-big">
+                    <img src="Assets/images/Frog.png" alt="Frog Render" class="img-big">
                     <div class="small-images">
-                        <img src="Assets/images/Frog.png" class="img-small">
-                        <img src="Assets/images/Frog.png" class="img-small">
+                        <img src="Assets/images/Frog.png" alt="Frog front" class="img-small">
+                        <img src="Assets/images/Frog.png" alt="Frog side" class="img-small">
                     </div>
                 </div>
-                <h3>Frog Render</h3>
+                <h3>🐸 Frog Render</h3>
                 <p>Experiment making a character out of only primitives.</p>
             </div>
 
             <div class="card project-card">
                 <div class="image-collage">
-                    <img src="Assets/images/CoffeeMug.png" class="img-big">
+                    <img src="Assets/images/CoffeeMug.png" alt="Coffee Mug" class="img-big">
                     <div class="small-images">
-                        <img src="Assets/images/CoffeeMug.png" class="img-small">
-                        <img src="Assets/images/CoffeeMug.png" class="img-small">
+                        <img src="Assets/images/CoffeeMug.png" alt="Mug 1" class="img-small">
+                        <img src="Assets/images/CoffeeMug.png" alt="Mug 2" class="img-small">
                     </div>
                 </div>
-                <h3>Mug Asset</h3>
+                <h3>☕ Mug Asset</h3>
                 <p>First attempt at making assets.</p>
             </div>
 
             <div class="card project-card">
                 <div class="image-collage">
-                    <img src="Assets/images/GaySign.png" class="img-big">
+                    <img src="Assets/images/GaySign.png" alt="Neon Sign" class="img-big">
                     <div class="small-images">
-                        <img src="Assets/images/GaySign.png" class="img-small">
-                        <img src="Assets/images/GaySign.png" class="img-small">
+                        <img src="Assets/images/GaySign.png" alt="Sign 1" class="img-small">
+                        <img src="Assets/images/GaySign.png" alt="Sign 2" class="img-small">
                     </div>
                 </div>
-                <h3>Neon Sign</h3>
+                <h3>🌈 Neon Sign</h3>
                 <p>Experimenting with emissions and curves.</p>
             </div>
 
             <div class="card project-card">
                 <div class="image-collage">
-                    <img src="Assets/images/Hikun.png" class="img-big">
+                    <img src="Assets/images/Hikun.png" alt="Hikun Robot" class="img-big">
                     <div class="small-images">
-                        <img src="Assets/images/Hikun.png" class="img-small">
-                        <img src="Assets/images/Hikun.png" class="img-small">
+                        <img src="Assets/images/Hikun.png" alt="Hikun 1" class="img-small">
+                        <img src="Assets/images/Hikun.png" alt="Hikun 2" class="img-small">
                     </div>
                 </div>
-                <h3>Hikun</h3>
-                <p>Robot based of Truz made with primitives.</p>
+                <h3>🤖 Hikun</h3>
+                <p>Robot based on Truz made with primitives.</p>
             </div>
+
         </div>
     </section>
 
-    <section id="interactive-view" class="view hidden">
-        <!-- Background image -->
-        <img src="Assets/images/background.jpeg" alt="Underwater Library" class="background-water-interactive">
-
-        <!-- Content -->
-        <div class="container">
-            <h1 class="header">Abigail Hope Sykes</h1>
-            <p class="intro">Game Developer & Artist ✨ Inspired by games, K-pop, and dreamy worlds</p>
-            <!-- more portfolio content here -->
-        </div>
-
-    </section>
-
-    <script src="js/script.js"></script>
+    <!-- FOOTER -->
+    <footer>
+        <p>🐱 Meownnty Studio · Made with <span class="heart">♥</span> and neon pink chaos</p>
+        <p style="font-size:0.8rem; color:#555; margin-top:0.3rem;">
+            #FF0073 · #00FF40 · #FFBED8 · #BAEDBE · #FFFFFF
+        </p>
+    </footer>
 </body>
 </html>
