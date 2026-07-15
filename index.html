@@ -1,17 +1,73 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Abigail Hope Sykes</title> <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet"> <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meownnty Studio</title>
+  <!-- Google Fonts: add Orbitron for headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Glitch Flash Overlay -->
+  <div class="glitch-overlay"></div>
 
-        <h1>Meownnty Studio</h1>
-        <p>Welcome to my creative space!</p>
-   
+  <!-- Canvas Background -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAVIGATION (same as before, but with a chaotic hover) -->
+  <nav class="navbar">...</nav>
+
+  <!-- HERO (Asymmetrical) -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        <span class="glitch-text" data-text="MEOWNNTY">MEOWNNTY</span>
+        <span class="neon-sub">STUDIOS</span>
+      </h1>
+      <!-- Chaos tagline with hand-writing font -->
+      <p class="chaos-tagline">✦ Game Dev · 3D Art · VTuber ✦</p>
+      <p style="color:#AAA; max-width:400px; transform:rotate(1deg);">
+        Inspired by games, K-pop, and dreamy worlds. 
+        <span style="color:#FF0073; font-weight:700;">#neonchaos</span>
+      </p>
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn btn-primary">▶ VIEW WORK</a>
+        <a href="#shop" class="btn btn-secondary" style="background:#00FF40;color:#000;">✦ SHOP ✦</a>
+      </div>
+    </div>
+    <div class="hero-mascot">
+      <!-- Replace with your character png with transparent bg -->
+      <img src="Assets/images/your-character.png" alt="Mascot" style="width:100%;">
+    </div>
+  </section>
+
+  <!-- CHAOS MARQUEE -->
+  <div class="marquee">
+    <span>✦ NEON PINK CATS ✦ GLOWING FROGS ✦ BIG DREAMS ✦ GAME DEV ✦ 3D ART ✦ VTUBER ✦ SHOP NOW ✦ </span>
+  </div>
+
+  <!-- PORTFOLIO (with filters) -->
+  <section id="portfolio" class="portfolio">
+    <h2 class="section-title" style="transform:skewX(-5deg);">// PROJECTS</h2>
+    <div class="filter-buttons">...</div>
+    <div class="cards-container">
+      <!-- Your cards with data-category -->
+      <div class="card project-card" data-category="game" style="--rot:2deg;">
+        ...
+      </div>
+      <!-- Repeat for others, change the --rot inline style for variety -->
+    </div>
+  </section>
+
+  <!-- SHOP SECTION -->
+  <section id="shop" class="shop-section">
+    <!-- ... -->
+  </section>
+
+  <footer>...</footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
