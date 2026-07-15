@@ -11,63 +11,86 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Glitch Flash Overlay -->
-  <div class="glitch-overlay"></div>
 
-  <!-- Canvas Background -->
+  <!-- ===== CANVAS FOR PARTICLE BACKGROUND ===== -->
   <canvas id="bgCanvas"></canvas>
 
-  <!-- NAVIGATION (same as before, but with a chaotic hover) -->
-  <nav class="navbar">...</nav>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="Assets/images/your-logo.png" alt="Meownnty Studios" height="40">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-social">
+        <a href="#" target="_blank"><img src="assets/icons/instagram.svg" alt="IG"></a>
+        <a href="#" target="_blank"><img src="assets/icons/twitter.svg" alt="X"></a>
+        <a href="#" target="_blank"><img src="assets/icons/etsy.svg" alt="Etsy"></a>
+      </div>
+    </div>
+  </nav>
 
-  <!-- HERO (Asymmetrical) -->
+  <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-content">
       <h1>
         <span class="glitch-text" data-text="MEOWNNTY">MEOWNNTY</span>
         <span class="neon-sub">STUDIOS</span>
       </h1>
-      <!-- Chaos tagline with hand-writing font -->
-      <p class="chaos-tagline">✦ Game Dev · 3D Art · VTuber ✦</p>
-      <p style="color:#AAA; max-width:400px; transform:rotate(1deg);">
-        Inspired by games, K-pop, and dreamy worlds. 
-        <span style="color:#FF0073; font-weight:700;">#neonchaos</span>
+      <p class="hero-tagline">
+        Game Dev · 3D Art · VTuber Models · <span class="highlight">Chaos</span>
       </p>
       <div class="hero-buttons">
-        <a href="#portfolio" class="btn btn-primary">▶ VIEW WORK</a>
-        <a href="#shop" class="btn btn-secondary" style="background:#00FF40;color:#000;">✦ SHOP ✦</a>
+        <a href="#portfolio" class="btn btn-primary">View Work</a>
+        <a href="#shop" class="btn btn-secondary">Shop</a>
       </div>
     </div>
+    <!-- Optional: a floating mascot image -->
     <div class="hero-mascot">
-      <!-- Replace with your character png with transparent bg -->
-      <img src="Assets/images/your-character.png" alt="Mascot" style="width:100%;">
+      <img src="Assets/images/your-character.png" alt="Mascot">
     </div>
   </section>
 
-  <!-- CHAOS MARQUEE -->
-  <div class="marquee">
-    <span>✦ NEON PINK CATS ✦ GLOWING FROGS ✦ BIG DREAMS ✦ GAME DEV ✦ 3D ART ✦ VTUBER ✦ SHOP NOW ✦ </span>
-  </div>
-
-  <!-- PORTFOLIO (with filters) -->
+  <!-- ===== PORTFOLIO (with filters) ===== -->
   <section id="portfolio" class="portfolio">
-    <h2 class="section-title" style="transform:skewX(-5deg);">// PROJECTS</h2>
-    <div class="filter-buttons">...</div>
+    <h2 class="section-title">// PROJECTS</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="game">Games</button>
+      <button class="filter-btn" data-filter="3d">3D Art</button>
+      <button class="filter-btn" data-filter="vtuber">VTuber</button>
+    </div>
     <div class="cards-container">
-      <!-- Your cards with data-category -->
-      <div class="card project-card" data-category="game" style="--rot:2deg;">
-        ...
+      <!-- Your existing cards, but add a data-category attribute -->
+      <div class="card project-card" data-category="game">
+        <!-- ... -->
       </div>
-      <!-- Repeat for others, change the --rot inline style for variety -->
+      <!-- ... -->
     </div>
   </section>
 
-  <!-- SHOP SECTION -->
+  <!-- ===== SHOP LINKS (minimal) ===== -->
   <section id="shop" class="shop-section">
-    <!-- ... -->
+    <h2 class="section-title">// SHOP</h2>
+    <p>Find my physical products and commissions on:</p>
+    <div class="shop-links">
+      <a href="#" class="shop-link">Etsy</a>
+      <a href="#" class="shop-link">VGen</a>
+      <a href="#" class="shop-link">Ko‑fi</a>
+    </div>
   </section>
 
-  <footer>...</footer>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>🐱 Meownnty Studio · Made with <span class="heart">♥</span> and neon pink chaos</p>
+    <p class="footer-colors">#FF0073 · #00FF40 · #0A0A0A</p>
+  </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
