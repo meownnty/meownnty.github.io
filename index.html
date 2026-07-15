@@ -1,96 +1,167 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meownnty Studio</title>
-  <!-- Google Fonts: add Orbitron for headings -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meownnty Studio</title>
+    <!-- Google Fonts: Orbitron for headers, Indie Flower for chaos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Indie+Flower&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===== CANVAS FOR PARTICLE BACKGROUND ===== -->
-  <canvas id="bgCanvas"></canvas>
+    <!-- ===== CANVAS FOR BACKGROUND PARTICLES ===== -->
+    <canvas id="bgCanvas"></canvas>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <img src="Assets/images/your-logo.png" alt="Meownnty Studios" height="40">
-      </a>
-      <ul class="nav-links">
-        <li><a href="#portfolio">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-social">
-        <a href="#" target="_blank"><img src="assets/icons/instagram.svg" alt="IG"></a>
-        <a href="#" target="_blank"><img src="assets/icons/twitter.svg" alt="X"></a>
-        <a href="#" target="_blank"><img src="assets/icons/etsy.svg" alt="Etsy"></a>
-      </div>
-    </div>
-  </nav>
+    <!-- ===== NAVIGATION (Dark & Sleek) ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <!-- Replace with your actual logo path -->
+                <img src="Assets/images/your-logo.png" alt="Meownnty Studios" height="40">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-social">
+                <a href="#" target="_blank">IG</a>
+                <a href="#" target="_blank">X</a>
+                <a href="#" target="_blank">Etsy</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>
-        <span class="glitch-text" data-text="MEOWNNTY">MEOWNNTY</span>
-        <span class="neon-sub">STUDIOS</span>
-      </h1>
-      <p class="hero-tagline">
-        Game Dev · 3D Art · VTuber Models · <span class="highlight">Chaos</span>
-      </p>
-      <div class="hero-buttons">
-        <a href="#portfolio" class="btn btn-primary">View Work</a>
-        <a href="#shop" class="btn btn-secondary">Shop</a>
-      </div>
-    </div>
-    <!-- Optional: a floating mascot image -->
-    <div class="hero-mascot">
-      <img src="Assets/images/your-character.png" alt="Mascot">
-    </div>
-  </section>
+    <!-- ===== HERO (Asymmetrical layout with Mascot) ===== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                <span class="glitch-text" data-text="MEOWNNTY">MEOWNNTY</span>
+                <span class="neon-sub">STUDIOS</span>
+            </h1>
+            <!-- Chaos tagline with hand-writing font -->
+            <p class="chaos-tagline">✦ Game Dev · 3D Art · VTuber ✦</p>
+            <p style="color:#AAA; max-width:400px; transform:rotate(1deg);">
+                Inspired by games, K-pop, and dreamy worlds. 
+                <span style="color:#FF0073; font-weight:700;">#neonchaos</span>
+            </p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">▶ VIEW WORK</a>
+                <a href="#shop" class="btn btn-secondary">✦ SHOP ✦</a>
+            </div>
+        </div>
+        <div class="hero-mascot">
+            <!-- Replace with your transparent character PNG -->
+            <img src="Assets/images/your-character.png" alt="Mascot" style="width:100%;">
+        </div>
+    </section>
 
-  <!-- ===== PORTFOLIO (with filters) ===== -->
-  <section id="portfolio" class="portfolio">
-    <h2 class="section-title">// PROJECTS</h2>
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="game">Games</button>
-      <button class="filter-btn" data-filter="3d">3D Art</button>
-      <button class="filter-btn" data-filter="vtuber">VTuber</button>
+    <!-- ===== CHAOS MARQUEE (The "News Headline" you liked) ===== -->
+    <div class="marquee">
+        <span>✦ NEON PINK CATS ✦ GLOWING FROGS ✦ BIG DREAMS ✦ GAME DEV ✦ 3D ART ✦ VTUBER ✦ SHOP NOW ✦ </span>
     </div>
-    <div class="cards-container">
-      <!-- Your existing cards, but add a data-category attribute -->
-      <div class="card project-card" data-category="game">
-        <!-- ... -->
-      </div>
-      <!-- ... -->
-    </div>
-  </section>
 
-  <!-- ===== SHOP LINKS (minimal) ===== -->
-  <section id="shop" class="shop-section">
-    <h2 class="section-title">// SHOP</h2>
-    <p>Find my physical products and commissions on:</p>
-    <div class="shop-links">
-      <a href="#" class="shop-link">Etsy</a>
-      <a href="#" class="shop-link">VGen</a>
-      <a href="#" class="shop-link">Ko‑fi</a>
-    </div>
-  </section>
+    <!-- ===== PORTFOLIO SECTION ===== -->
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-title" style="transform:skewX(-5deg);">// PROJECTS</h2>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="game">Games</button>
+            <button class="filter-btn" data-filter="3d">3D Art</button>
+            <button class="filter-btn" data-filter="vtuber">VTuber</button>
+        </div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>🐱 Meownnty Studio · Made with <span class="heart">♥</span> and neon pink chaos</p>
-    <p class="footer-colors">#FF0073 · #00FF40 · #0A0A0A</p>
-  </footer>
+        <div class="cards-container">
+            <!-- CARD 1 -->
+            <div class="card project-card" data-category="game" style="--rot:2.5deg;">
+                <div class="image-collage">
+                    <img src="Assets/images/Mush-Go-Deeper.png" alt="Mush Go Deeper" class="img-big">
+                    <div class="small-images">
+                        <img src="Assets/images/Mush-Go-Deeper.png" alt="Screenshot 1" class="img-small">
+                        <img src="Assets/images/Mush-Go-Deeper.png" alt="Screenshot 2" class="img-small">
+                    </div>
+                </div>
+                <h3>🍄 Mush Go Deeper</h3>
+                <p>A 2D platformer made for Ludum Dare 2025.</p>
+            </div>
 
-  <script src="js/main.js"></script>
+            <!-- CARD 2 -->
+            <div class="card project-card" data-category="3d" style="--rot:-2deg;">
+                <div class="image-collage">
+                    <img src="Assets/images/Frog.png" alt="Frog Render" class="img-big">
+                    <div class="small-images">
+                        <img src="Assets/images/Frog.png" alt="Frog front" class="img-small">
+                        <img src="Assets/images/Frog.png" alt="Frog side" class="img-small">
+                    </div>
+                </div>
+                <h3>🐸 Frog Render</h3>
+                <p>Experiment making a character out of only primitives.</p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card project-card" data-category="3d" style="--rot:3deg;">
+                <div class="image-collage">
+                    <img src="Assets/images/CoffeeMug.png" alt="Coffee Mug" class="img-big">
+                    <div class="small-images">
+                        <img src="Assets/images/CoffeeMug.png" alt="Mug 1" class="img-small">
+                        <img src="Assets/images/CoffeeMug.png" alt="Mug 2" class="img-small">
+                    </div>
+                </div>
+                <h3>☕ Mug Asset</h3>
+                <p>First attempt at making assets.</p>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="card project-card" data-category="3d" style="--rot:-1.5deg;">
+                <div class="image-collage">
+                    <img src="Assets/images/GaySign.png" alt="Neon Sign" class="img-big">
+                    <div class="small-images">
+                        <img src="Assets/images/GaySign.png" alt="Sign 1" class="img-small">
+                        <img src="Assets/images/GaySign.png" alt="Sign 2" class="img-small">
+                    </div>
+                </div>
+                <h3>🌈 Neon Sign</h3>
+                <p>Experimenting with emissions and curves.</p>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="card project-card" data-category="vtuber" style="--rot:2deg;">
+                <div class="image-collage">
+                    <img src="Assets/images/Hikun.png" alt="Hikun Robot" class="img-big">
+                    <div class="small-images">
+                        <img src="Assets/images/Hikun.png" alt="Hikun 1" class="img-small">
+                        <img src="Assets/images/Hikun.png" alt="Hikun 2" class="img-small">
+                    </div>
+                </div>
+                <h3>🤖 Hikun</h3>
+                <p>Robot based on Truz made with primitives.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SHOP SECTION (Minimal Links) ===== -->
+    <section id="shop" class="shop-section">
+        <h2 class="section-title">// SHOP</h2>
+        <p>Find my physical products and commissions on:</p>
+        <div class="shop-links">
+            <a href="#" class="shop-link">Etsy</a>
+            <a href="#" class="shop-link">VGen</a>
+            <a href="#" class="shop-link">Ko‑fi</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>🐱 Meownnty Studio · Made with <span class="heart">♥</span> and neon pink chaos</p>
+        <p class="footer-colors">#FF0073 · #00FF40 · #0A0A0A</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
