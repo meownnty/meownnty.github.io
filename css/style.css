@@ -6,7 +6,7 @@
    #BAEDBE -> Light Green (Accent)
    #FFFFFF -> White accent
    ============================================ */
-html,body {
+body {
   background: #FF0073;
   background-repeat: no-repeat;
   background-attachment: fixed;
