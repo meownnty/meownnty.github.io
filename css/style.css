@@ -6,4 +6,9 @@
    #BAEDBE -> Light Green (Accent)
    #FFFFFF -> White accent
    ============================================ */
-
+body {
+  background-image: url('Assets/images/Website background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
